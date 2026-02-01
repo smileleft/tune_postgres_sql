@@ -11,6 +11,13 @@ reuses
 fsyncs/fsync_time
 ```
 
+## test pg_test_timing
+
+```bash
+# If more than 90% is less than 1 microsecond, it is good.
+/usr/pgsql-17/bin/pg_test_timing
+```
+
 ## query example for IO monitoring(from pg_stat_io)
 
 ```sql
