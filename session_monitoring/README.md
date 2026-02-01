@@ -59,3 +59,16 @@ PreparedStatement pstmt = conn.prepareStatement(sql);
 pstmt.setString(1, fromdate);
 pstmt.setString(2, toDate);
 ```
+
+## Use: auto_explain
+
+```bash
+# edit config
+shared_preload_libraries = 'pg_stat_statements, auto_explain'
+auto_explain.log_min_duration = 60s # for batch: 60s, for online: 10s
+auto_explain.log_analyze = on
+auto_explain.log_buffers = on
+
+# restart postgreSQL
+pg_ctl reload # or postgres service restart
+```
