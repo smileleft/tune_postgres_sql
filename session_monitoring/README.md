@@ -82,3 +82,9 @@ pg_stat_statements.max = 10000
 pg_stat_statements.track = all
 track_activity_query_size = 64kb
 ```
+
+```sql
+select pg_stat_statememts_result(); -- pg_stat_statements init
+select pg_sleep(1) from generate_series(1,1) i;
+select pg_sleep(2) from generate_series(2,2) i
+```
