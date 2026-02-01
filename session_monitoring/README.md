@@ -72,3 +72,13 @@ auto_explain.log_buffers = on
 # restart postgreSQL
 pg_ctl reload # or postgres service restart
 ```
+
+## check slow query
+
+```bash
+# configure pg_statements
+shared_preload_libraries = 'pg_stat_statements,auto_explain'
+pg_stat_statements.max = 10000
+pg_stat_statements.track = all
+track_activity_query_size = 64kb
+```
