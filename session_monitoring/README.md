@@ -48,11 +48,11 @@ from pg_stat_activity
 where pid = {your pid};
 ```
 
-## How to check slow query
+## Example: How to check slow query
 
 ```java
--- String fromDate = "20260130";
--- String toDate = "20260131";
+String fromDate = "20260130";
+String toDate = "20260131";
 String sql = "SELECT COUNT(*) FROM t_log_r WHERE log_date BETWEEN ? and ?";
 Connection conn = DriverManager.getConnection(url, user, password);
 PreparedStatement pstmt = conn.prepareStatement(sql);
