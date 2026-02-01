@@ -35,3 +35,15 @@ where state in ('active', 'idle_in_transaction')
 and pid not in (select pg_backend_pid())
 order by 6 desc;
 ```
+
+## extract(epoch from)
+
+```sql
+select
+  query_start,
+  current_timestamp,
+  current_timestamp - query_start as elapsed_time,
+  extract(epoch from current_timestamp - query_start) as elapsed_time_sec
+from pg_stat_activity
+where pid = {your pid};
+```
