@@ -18,7 +18,7 @@ fsyncs/fsync_time
 /usr/pgsql-17/bin/pg_test_timing
 ```
 
-## query example for IO monitoring(from pg_stat_io)
+## query example for IO monitoring(from pg_stat_io, postgreSQL v17.x or later)
 
 ```sql
 select
