@@ -13,3 +13,6 @@ Client
 BufferPin
 Extension
 ```
+
+## pg_wait_sampling Extension (not Official, open source
+https://github.com/postgrespro/pg_wait_sampling
