@@ -36,3 +36,15 @@ autovacuum_vacuum_insert_threshold
 autovacuum_vacuum_scale_factor
 autovacuum_vacuum_threshold
 ```
+
+## how to calculate time to create statistics data
+
+```bash
+autovacuum_analyze_threshold(50) + autovacuum_analyze_scale_factor(0.1) X reltuples
+```
+
+## how to calculate time to vacuum for inserted record
+
+```bash
+autovacuum_vacuum_insert_threshold(1000) + autovacuum_vacuum_insert_scale_factor(0.2) X reltuples
+```
