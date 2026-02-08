@@ -48,3 +48,9 @@ autovacuum_analyze_threshold(50) + autovacuum_analyze_scale_factor(0.1) X reltup
 ```bash
 autovacuum_vacuum_insert_threshold(1000) + autovacuum_vacuum_insert_scale_factor(0.2) X reltuples
 ```
+
+## how to calculate time to cleaning dead tuples
+
+```bash
+autovacuum_vacuum_threshold(50) + autovacuum_vacuum_scale_factor(0.2) X reltuples
+```
