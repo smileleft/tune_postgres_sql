@@ -20,3 +20,19 @@ alter system set autovacuum=off;
 ```sql
 select lp, t_xmin, t_xmax from heap_page_items(get_raw_page('{target table}', 0));
 ```
+
+## parameter for vacuum/autovacuum
+
+```bash
+autovacuum_naptime
+autovacuum_max_workers
+autovacuum_vacuum_cost_delay
+autovacuum_vacuum_cost_limit
+
+autovacuum_analyze_scale_factor
+autovacuum_analyze_threshold
+autovacuum_vacuum_insert_scale_factor
+autovacuum_vacuum_insert_threshold
+autovacuum_vacuum_scale_factor
+autovacuum_vacuum_threshold
+```
