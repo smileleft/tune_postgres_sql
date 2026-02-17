@@ -5,6 +5,9 @@ postgreSQL query tunning
 
 ```bash
 
-# postgresql.conf
+# edit postgresql.conf
 shared_preload_libraries = 'pg_stat_statements'
+
+# restart db and create extension
+CREATE EXTENSION pg_stat_statements;
 ```
